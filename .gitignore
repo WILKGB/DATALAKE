@@ -1,0 +1,42 @@
+# ===== Terraform =====
+# Directorios de trabajo locales
+**/.terraform/*
+.terraform.lock.hcl
+
+# Archivos de estado (NUNCA subir: contienen datos sensibles)
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Planes guardados (pueden contener secretos)
+*.tfplan
+tfplan.out
+*.tfplan.out
+
+# Variables con posibles secretos
+*.auto.tfvars
+# OJO: terraform.tfvars SÍ se versiona en este repo porque solo tiene
+# config no sensible. Si agregas secretos, descomenta la línea de abajo:
+# terraform.tfvars
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Overrides locales
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# ===== Credenciales / entorno =====
+.env
+*.pem
+*.key
+.aws/
+
+# ===== OS / editor =====
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
